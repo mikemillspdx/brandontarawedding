@@ -1,0 +1,54 @@
+/*
+.carousel .slide{
+	background-color: #000;
+	background-image:none !important;
+}
+
+.carousel-inner .active{
+	background-color: #000;
+	background-image:none !important;
+}
+
+.carousel .item .active{
+	background-color: #000;
+	background-image:none !important;
+}
+
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+*/
+
+
+.carousel-text1 
+{
+	color:white;
+	text-shadow: 1px 1px 5px black;
+}
+
+.carousel-text2 
+{
+	color:white;
+	text-shadow: 1px 1px 5px black;
+}
+
+.carousel-text3 
+{
+	color:white;
+	text-shadow: 1px 1px 5px black;
+}
+      
+.img-circle 
+{
+    width: 140px;
+    height: 140px;
+    -webkit-transition:height 0.5s linear 0s;
+    transition:height 0.5s linear 0s;
+}
+      
+.img-circle:hover 
+{
+    width: 340px;
+    height: 340px;
+    z-index: 10
+}

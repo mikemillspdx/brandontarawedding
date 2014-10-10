@@ -1,0 +1,19 @@
+<div class="hero-unit">
+  <h2>All TodoApps</h2>
+  <%- linkTo('Create a new TodoApp', addTodoAppPath, {class: 'btn pull-right'}); %>
+</div>
+
+<div id="todoApps-list">
+<% if (todoApps) { %>
+<% for (var i = 0, ii = todoApps.length; i < ii; i++) { %>
+  <div class="row list-item" id="todoApp-<%= todoApps[i].id; %>">
+    <div class="span8">
+      <h3><%- linkTo(todoApps[i].title, todoAppPath(todoApps[i].id)); %></h3>
+    </div>
+    <div class="span4">
+      <h3><i class="icon-list-alt"></i><%= todoApps[i].id; %></h3>
+    </div>
+  </div>
+<% } %>
+<% } %>
+</div>
