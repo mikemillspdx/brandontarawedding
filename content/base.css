@@ -52,3 +52,22 @@
     height: 340px;
     z-index: 10
 }
+
+.summaryBox {
+  background: -webkit-linear-gradient(#f1f1f1, #9fbfbc); 
+  background: -o-linear-gradient(#f1f1f1, #9fbfbc); 
+  background: -moz-linear-gradient(#f1f1f1, #9fbfbc); 
+  background: linear-gradient(#f1f1f1, #9fbfbc); 
+  width: 400px;
+  min-height: 300px;
+  box-shadow: 3px 3px 3px #484848;
+  border: solid 1px #d4d4d4;
+  color: #222222;
+  font-family: helvetica;
+  font-size: 13pt;
+}
+
+
+.summaryBox a{
+		color: #121212;
+	}
