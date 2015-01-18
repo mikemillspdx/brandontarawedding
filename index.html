@@ -29,16 +29,35 @@
     <!-- Custom styles for this template -->
     <link href="./content/carousel.css" rel="stylesheet">
     <link href="./content/base.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="./content/popoutPic.js"></script>
-    
-
   </head>
 <!-- NAVBAR
 ================================================== -->
-  <body>
-    <div class='container'>
+  <body id='siteBody'>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header" style='text-align: right'>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand lnkButton" id="title"><img src='images/headerlogo.png' style='margin-top: -5px' /></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse" >
+          <ul class="nav navbar-nav" style='text-align: right'>
+            <li><a id="about" class='lnkButton'>About the Wedding</a></li>
+            <li><a id="story" class='lnkButton'>Our Story</a></li>
+            <li><a id="directions" class='lnkButton'>Getting There</a></li>
+            <li><a id="accomidations" class='lnkButton'>Accommodations</a></li>
+            <li><a id="gifts" class='lnkButton'>Gifts</a></li>
+            <li><a id="rsvp" class='lnkButton'>RSVP</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class='container sitesection'>
+    <div class='container'  style='margin-top: 60px' >
       <img src = '/images/logo.png' />
     </div>
     <div class='container' style='margin-top: 150px'> 
@@ -48,10 +67,137 @@
       </div>
     </div>
     </div>
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
+  </div>
+    <div id="mask" style="position: absolute; top: 0; left: 0; background: white; display: none;"​​​​​​​​​​​​​​​​​​​​​​></div>
+    <div class='container sitesection'><a name="about"></a>About the Wedding
+    </div>
+    <div class='container sitesection'><a name="story"></a>Our Story
+    </div>
+    <div class='container sitesection'><a name="directions"></a>Getting There
+    </div>
+    <div class='container sitesection'><a name="accomidations"></a>Accomidations
+    </div>
+    <div class='container sitesection'><a name="gifts"></a>Gifts
+    </div>
+    <div class='container sitesection'><a name="rsvp"></a>RSVP
+    </div>
 
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./content/popoutPic.js"></script>
+    <script type="text/javascript">
+    var disableScroll = false;
+    var currentBackground = "background1.png";
+    $('.navbar').css({'background' : "none"});
+    $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#222222"});
+    $(".lnkButton").click(function(ev){
+      var id = ev.currentTarget.id;
+      var scrollPosition = 0;
+      if(id==='about'){
+          scrollPosition = 1000;
+      }
+      if(id==='story'){
+          scrollPosition = 2000;
+      }
+      if(id==='directions'){
+          scrollPosition = 3000;
+      }
+      if(id==='accomidations'){
+          scrollPosition = 4000;
+      }
+      if(id==='gifts'){
+          scrollPosition = 5000;
+      }
+      if(id==='rsvp'){
+          scrollPosition = 6000;
+      }
+      if(id==='title'){
+          scrollPosition = 0;
+      }
+      var backgroundImage = getBackground(scrollPosition);
+      disableScroll = true;
+      $("body, html").animate({ scrollTop: scrollPosition},  "linear", function() {
+        disableScroll = false;
+        if(currentBackground !== backgroundImage)
+        {
+          updateBackground(backgroundImage);
+          currentBackground = backgroundImage;
+        }
+      });
+    });
+
+    $(window).scroll(function() {
+      //var scrollPosition = window.document.body.scrollTop; //$("#siteBody").scrollTop();
+      if(disableScroll === false)
+      {
+          var scrollPosition = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
+          console.log("scrollPosition:", scrollPosition);
+          var backgroundImage = getBackground(scrollPosition); 
+          $('#mask').css({height: $(window).height(), width: $(window).width(), top: $(window).scrollTop()});
+          if(backgroundImage.length > 0 && currentBackground !== backgroundImage)
+          {
+              updateBackground(backgroundImage);
+              currentBackground = backgroundImage;
+          }
+      }
+    });
+
+    function updateBackground(backgroundImage){ 
+      $('#mask').css({height: $(window).height(), width: $(window).width(), top: $(window).scrollTop()})
+          .fadeIn('slow', function(){
+              $('#siteBody').css('background-image', 'url(../images/'+ backgroundImage +')');
+              $('#mask').fadeOut('slow');
+          });
+    }
+
+    function getBackground(scrollPosition){
+      var backgroundImage = '';
+      if(scrollPosition < 1000)
+      {
+         backgroundImage = 'background1.png';
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#222222"});
+          $('.navbar').css({'background-color' : "transparent"});
+      }
+      else if(scrollPosition < 2000)
+      {
+         backgroundImage = 'dance.jpg';
+          $('.navbar').css({'background-color' : "#222222"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 3000)
+      {
+         backgroundImage = 'background1.png';
+          $('.navbar').css({'background-color' : "#222222"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 4000)
+      {
+         backgroundImage = 'ranch-view.jpg';
+          $('.navbar').animate({'background-color' : "#222222"}, 500);
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 5000)
+      {
+         backgroundImage = 'background1.png';
+          $('.navbar').css({'background-color' : "#222222"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 6000)
+      {
+         backgroundImage = 'ranch-view.jpg';
+          $('.navbar').css({'background-color' : "#222222"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 7000)
+      {
+         backgroundImage = 'background1.png';
+          $('.navbar').css({'background-color' : "#222222"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      return backgroundImage;
+    }
+    </script>
   </body>
 </html>
