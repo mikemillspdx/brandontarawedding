@@ -56,6 +56,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+    <div id="mask" style="position: absolute; top: 0; left: 0; background: #444444; display: none; z-index: 100"​​​​​​​​​​​​​​​​​​​​​​></div>
     <div class='container sitesection'>
     <div class='container'  style='margin-top: 60px' >
       <img src = '/images/logo.png' />
@@ -68,7 +69,6 @@
     </div>
     </div>
   </div>
-    <div id="mask" style="position: absolute; top: 0; left: 0; background: white; display: none;"​​​​​​​​​​​​​​​​​​​​​​></div>
     <div class='container sitesection'><a name="about"></a>About the Wedding
     </div>
     <div class='container sitesection'><a name="story"></a>Our Story
@@ -90,8 +90,8 @@
     <script type="text/javascript">
     var disableScroll = false;
     var currentBackground = "background1.png";
-    $('.navbar').css({'background' : "none"});
-    $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#222222"});
+    $('.navbar').css({'background-color' : "#444444"});
+    $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
     $(".lnkButton").click(function(ev){
       var id = ev.currentTarget.id;
       var scrollPosition = 0;
@@ -157,43 +157,43 @@
       if(scrollPosition < 1000)
       {
          backgroundImage = 'background1.png';
-          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#222222"});
-          $('.navbar').css({'background-color' : "transparent"});
+          $('.navbar').css({'background-color' : "#444444"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
       }
       else if(scrollPosition < 2000)
       {
-         backgroundImage = 'dance.jpg';
-          $('.navbar').css({'background-color' : "#222222"});
+         backgroundImage = 'ranch.png';
+          $('.navbar').css({'background-color' : "#444444"});
           $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
       }
       else if(scrollPosition < 3000)
       {
-         backgroundImage = 'background1.png';
-          $('.navbar').css({'background-color' : "#222222"});
+         backgroundImage = 'about.png';
+          $('.navbar').css({'background-color' : "#444444"});
           $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
       }
       else if(scrollPosition < 4000)
       {
-         backgroundImage = 'ranch-view.jpg';
-          $('.navbar').animate({'background-color' : "#222222"}, 500);
+         backgroundImage = 'dunes.png';
+          $('.navbar').animate({'background-color' : "#444444"}, 500);
           $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
       }
       else if(scrollPosition < 5000)
       {
-         backgroundImage = 'background1.png';
-          $('.navbar').css({'background-color' : "#222222"});
+         backgroundImage = 'dunes.png';
+          $('.navbar').css({'background-color' : "#444444"});
           $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
       }
       else if(scrollPosition < 6000)
       {
-         backgroundImage = 'ranch-view.jpg';
-          $('.navbar').css({'background-color' : "#222222"});
+         backgroundImage = 'dunes.png';
+          $('.navbar').css({'background-color' : "#444444"});
           $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
       }
       else if(scrollPosition < 7000)
       {
-         backgroundImage = 'background1.png';
-          $('.navbar').css({'background-color' : "#222222"});
+         backgroundImage = 'dunes.png';
+          $('.navbar').css({'background-color' : "#444444"});
           $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
       }
       return backgroundImage;
