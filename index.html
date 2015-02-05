@@ -3,201 +3,389 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
-    <title>Brandon and Tara's Wedding</title>
+    <title>Tara and Brandon's Wedding</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="assets/images/other_images/favicon.png">
 
     <!-- Bootstrap core CSS -->
-    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- owl carousel css -->
+    <link href="assets/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="assets/js/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="assets/js/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <!-- intro animations -->
+    <link href="assets/js/wow/animate.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- lightbox -->
+    <link href="assets/js/lightbox/css/lightbox.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- place your extra custom styles in this file -->
+    <link href="assets/css/custom.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
-    <!-- Custom styles for this template -->
-    <link href="./content/carousel.css" rel="stylesheet">
-    <link href="./content/base.css" rel="stylesheet">
   </head>
-<!-- NAVBAR
-================================================== -->
-  <body id='siteBody'>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header" style='text-align: right'>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand lnkButton" id="title"><img src='images/headerlogo.png' style='margin-top: -5px' /></a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse" >
-          <ul class="nav navbar-nav" style='text-align: right'>
-            <li><a id="about" class='lnkButton'>About the Wedding</a></li>
-            <li><a id="story" class='lnkButton'>Our Story</a></li>
-            <li><a id="directions" class='lnkButton'>Getting There</a></li>
-            <li><a id="accomidations" class='lnkButton'>Accommodations</a></li>
-            <li><a id="gifts" class='lnkButton'>Gifts</a></li>
-            <li><a id="rsvp" class='lnkButton'>RSVP</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-    <div id="mask" style="position: absolute; top: 0; left: 0; background: #444444; display: none; z-index: 100"​​​​​​​​​​​​​​​​​​​​​​></div>
-    <div class='container sitesection'>
-    <div class='container'  style='margin-top: 60px' >
-      <img src = '/images/logo.png' />
-    </div>
-    <div class='container' style='margin-top: 150px'> 
-    <div class='summaryBox'>
-      <img src='images/ranch-view.jpg' style='width:100%; margin-bottom: 8px; border-radius: 8px' />
-      <div style='padding: 4px;'>Join us May 9th to celebrate our wedding at <a href='http://palousecreekranch.com/' target='_blank'>Palouse Creek Ranch</a> in beautiful North Bend Oregon. Check back soon, more details to come!
-      </div>
-    </div>
-    </div>
-  </div>
-    <div class='container sitesection'><a name="about"></a>About the Wedding
-    </div>
-    <div class='container sitesection'><a name="story"></a>Our Story
-    </div>
-    <div class='container sitesection'><a name="directions"></a>Getting There
-    </div>
-    <div class='container sitesection'><a name="accomidations"></a>Accomidations
-    </div>
-    <div class='container sitesection'><a name="gifts"></a>Gifts
-    </div>
-    <div class='container sitesection'><a name="rsvp"></a>RSVP
-    </div>
 
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./content/popoutPic.js"></script>
+  <body>
+
+    <div class="background-image-overlay"></div>
+
+    <div id="outer-background-container" data-default-background-img="assets/images/other_images/bg5.jpg" style="background-image:url(assets/images/other_images/bg5.jpg);"></div>
+    <!-- end: #outer-background-container -->    
+
+    <!-- Outer Container -->
+    <div id="outer-container">
+
+      <!-- Left Sidebar -->
+      <section id="left-sidebar">
+        
+        <div class="logo">
+          <a href="#intro" class="link-scroll"><img src="images/logo.png" alt="Wedding" style='width: 160px'></a>
+        </div><!-- .logo -->
+
+        <!-- Menu Icon for smaller viewports -->
+        <div id="mobile-menu-icon" class="visible-xs" onClick="toggle_main_menu();"><span class="glyphicon glyphicon-th"></span></div>
+
+        <ul id="main-menu">
+          <li id="menu-item-text" class="menu-item scroll"><a href="#about">About the Wedding</a></li>
+          <li id="menu-item-carousel" class="menu-item scroll"><a href="#story">Our Story</a></li>
+          <li id="menu-item-grid" class="menu-item scroll"><a href="#directions">Getting There</a></li>
+          <li id="menu-item-featured" class="menu-item scroll"><a href="#accommodations">Accommodations</a></li>
+          <li id="menu-item-gifts" class="menu-item scroll"><a href="#gifts">Gifts</a></li>
+          <li id="menu-item-contact" class="menu-item scroll"><a href="#contact">RSVP</a></li>
+        </ul><!-- #main-menu -->
+
+      </section><!-- #left-sidebar -->
+      <!-- end: Left Sidebar -->
+
+      <section id="main-content" class="clearfix">
+        
+        <article id="intro" class="section-wrapper clearfix" data-custom-background-img="images/background1.png">
+          <div class="content-wrapper clearfix wow fadeInDown" data-wow-delay="0.3s">
+            <div class="col-sm-10 col-md-9 pull-right">
+
+                <section class="feature-text">
+                  <h1>Brandon and Tara's Wedding</h1>
+                  <p>On May 9th, 2015 Brandon and Tara say I do. Join us at <a href='http://palousecreekranch.com/'>Palouse Creek Ranch</a> in North Bend, Oregon for the celebration.</p>
+                  <p><a href="#about" class="link-scroll btn btn-outline-inverse btn-lg">find out more</a></p>
+                </section>
+
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+        <article id="about" class="section-wrapper clearfix" data-custom-background-img="images/ranch.png">
+          <div class="content-wrapper clearfix">
+            <div class="col-sm-10 col-md-9 pull-right">
+
+                <h1 class="section-title">The Wedding</h1>
+
+                <p class="feature-paragraph"><img data-img-src="assets/images/other_images/transp-image5b.png" class="lazy pull-right" alt="Lorem Ipsum">Etiam at ligula sit amet arcu laoreet consequat. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. <a href="#carousel">Suspendisse molestie lorem odio</a>, sit amet. Laoreet consequat. Duis dictum lorem metus, vitae dapibus.</p>
+                <h4>Duis dictum lorem metus</h4>
+                <p>Suspendisse molestie lorem odio, sit amet. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio. Etiam scelerisque lacus tempor, rhoncus diam vel, gravida felis. Fusce tristique sem et leo. Pellentesque sed malesuada turpis. Quisque eget lacus sit amet dui.</p>
+                
+                
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+        <article id="story" class="section-wrapper clearfix" data-custom-background-img="images/about.png">
+          <div class="content-wrapper clearfix">
+            <div class="col-sm-10 col-md-9 pull-right">
+
+                <h1 class="section-title">Our Story</h1>
+
+                <p class="feature-paragraph"><img data-img-src="assets/images/other_images/transp-image5b.png" class="lazy pull-right" alt="Lorem Ipsum">Etiam at ligula sit amet arcu laoreet consequat. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. <a href="#carousel">Suspendisse molestie lorem odio</a>, sit amet. Laoreet consequat. Duis dictum lorem metus, vitae dapibus.</p>
+                <h4>Duis dictum lorem metus</h4>
+                <p>Suspendisse molestie lorem odio, sit amet. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio. Etiam scelerisque lacus tempor, rhoncus diam vel, gravida felis. Fusce tristique sem et leo. Pellentesque sed malesuada turpis. Quisque eget lacus sit amet dui.</p>
+                
+                
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+        <article id="directions" class="section-wrapper clearfix" data-custom-background-img="images/dunes.png">
+          <div class="content-wrapper clearfix">
+            <div class="col-sm-10 col-md-9 pull-right">
+
+                <h1 class="section-title">Directions to the Wedding</h1>
+
+                <p class="feature-paragraph"><img data-img-src="assets/images/other_images/transp-image5b.png" class="lazy pull-right" alt="Lorem Ipsum">Etiam at ligula sit amet arcu laoreet consequat. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. <a href="#carousel">Suspendisse molestie lorem odio</a>, sit amet. Laoreet consequat. Duis dictum lorem metus, vitae dapibus.</p>
+                <h4>Duis dictum lorem metus</h4>
+                <p>Suspendisse molestie lorem odio, sit amet. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio. Etiam scelerisque lacus tempor, rhoncus diam vel, gravida felis. Fusce tristique sem et leo. Pellentesque sed malesuada turpis. Quisque eget lacus sit amet dui.</p>
+                
+                
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+      
+
+      <article id="accommodations" class="section-wrapper clearfix" data-custom-background-img="images/rsvp.png">
+          <div class="content-wrapper clearfix">
+            <div class="col-sm-11 pull-right">
+
+                <h1 class="section-title">Accommodations</h1>
+              
+                <!-- feature columns -->
+                <section class="feature-columns row clearfix">
+
+                  <!-- feature 1 -->
+                  <article class="feature-col col-md-4">
+                    <a href="" onclick="populate_and_open_modal(event, 'modal-content-6');" class="thumbnail linked">
+                      <div class="image-container">
+                        <img data-img-src="assets/images/other_images/project-3.jpg" class="lazy item-thumbnail" alt="Lorem Ipsum">
+                      </div>
+                      <div class="caption">
+                        <h5>Image Carousel</h5>
+                        <p>This feature contains an image carousel when you open popup.</p>
+                      </div><!-- .caption -->
+                    </a><!-- .thumbnail -->
+
+                    <div class="content-to-populate-in-modal" id="modal-content-6">
+                      <h1>Sed scelerisque</h1>
+                      <p>Nullam ac rhoncus. Aliquam adipiscing eros non elit imperdiet congue. Etiam at ligula sit amet arcu laoreet consequat.<br/></p>
+
+                      <!-- image slider inside popup -->
+                      <div id="unique-id-for-image-slider" class="owl-carousel popup-image-gallery">
+                        <!-- slide -->
+                        <div>
+                          <!-- caption is optional. To remove it, remove the <h6> below -->
+                          <h6 class="caption">Caption for Image 1</h6>
+                          <img class="lazyOwl" data-src="assets/images/other_images/bg1.jpg">
+                        </div>
+                        <!-- slide -->
+                        <div>
+                          <h6 class="caption">Caption for Image 2</h6>
+                          <img class="lazyOwl" data-src="assets/images/other_images/bg2.jpg">
+                        </div>
+                        <!-- slide -->
+                        <div>
+                          <h6 class="caption">Caption for Image 3</h6>
+                          <img class="lazyOwl" data-src="assets/images/other_images/bg3.jpg">
+                        </div>
+                      </div>
+                    </div><!-- #modal-content-6 -->
+                  </article>
+
+                  <!-- feature 2 -->
+                  <article class="feature-col col-md-4">
+                    <a href="" onclick="populate_and_open_modal(event, 'modal-content-7');" class="thumbnail linked">
+                      <div class="image-container">
+                        <img data-img-src="assets/images/other_images/project-2.jpg" class="lazy item-thumbnail" alt="Lorem Ipsum">
+                      </div>
+                      <div class="caption">
+                        <h5>Text popup</h5>
+                        <p>This feature contains generic image and text content when you open popup.</p>
+                      </div><!-- .caption -->
+                    </a><!-- .thumbnail -->
+
+                    <div class="content-to-populate-in-modal" id="modal-content-7">
+                      <img data-img-src="assets/images/other_images/top-image2.jpg" class="lazy full-width" alt="Lorem Ipsum">
+                      <h1>Sed scelerisque</h1>
+                      <p>Nullam ac rhoncus. Aliquam adipiscing eros non elit imperdiet congue. Etiam at ligula sit amet arcu laoreet consequat. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio</a>, sit amet. </p>
+                      <p>Laoreet consequat. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio, sit amet.</p>
+                      <p>Suspendisse molestie lorem odio, sit amet. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio test.</p>
+                    </div><!-- #modal-content-7 -->
+                  </article>
+
+                  <!-- feature 3 -->
+                  <article class="feature-col col-md-4">
+                    <a href="" onclick="populate_and_open_modal(event, 'modal-content-8', '', 'full-size');" class="thumbnail linked">
+                      <div class="image-container">
+                        <img data-img-src="assets/images/other_images/project-4.jpg" class="lazy item-thumbnail" alt="Lorem Ipsum">
+                      </div>
+                      <div class="caption">
+                        <h5>Alternate Gallery</h5>
+                        <p>Inside this feature's popup you'll find an alternative version of an image gallery.</p>
+                      </div><!-- .caption -->
+                    </a><!-- .thumbnail -->
+
+                    <div class="content-to-populate-in-modal" id="modal-content-8">
+                      <h1>Sed scelerisque</h1>
+                      <p>Nullam ac rhoncus. Aliquam adipiscing eros non elit imperdiet congue. Etiam at ligula sit amet arcu laoreet consequat. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio</a>, sit amet. Adipiscing eros non elit imperdiet congue tiam at ligula sit amet arcu.</p>
+
+                      <!-- alt image slider inside popup -->
+                      <div id="unique-id-for-alt-image-slider" class="owl-carousel popup-alt-image-gallery">
+                        <div class="item"><a href="assets/images/other_images/bg1.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-1.jpg"></a></div>
+                        <div class="item"><a href="assets/images/other_images/bg2.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-2.jpg"></a></div>
+                        <div class="item"><a href="assets/images/other_images/bg3.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-3.jpg"></a></div>
+                        <div class="item"><a href="assets/images/other_images/bg4.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-4.jpg"></a></div>
+                        <div class="item"><a href="assets/images/other_images/bg5.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-5.jpg"></a></div>
+                        <div class="item"><a href="assets/images/other_images/bg6.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-6.jpg"></a></div>
+                        <div class="item"><a href="assets/images/other_images/bg2.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-2.jpg"></a></div>
+                        <div class="item"><a href="assets/images/other_images/bg3.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-3.jpg"></a></div>
+                      </div>
+                    </div><!-- #modal-content-8 -->
+                  </article>
+
+                </section><!-- end: .feature-columns -->
+
+              <!-- End: Section content to edit -->
+
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+      <article id="gifts" class="section-wrapper clearfix" data-custom-background-img="images/dunes.png">
+          <div class="content-wrapper clearfix">
+            <div class="col-sm-10 col-md-9 pull-right">
+
+                <h1 class="section-title">Gifts</h1>
+
+                <p class="feature-paragraph"><img data-img-src="assets/images/other_images/transp-image5b.png" class="lazy pull-right" alt="Lorem Ipsum">Since this is a destination wedding, just being there is gift enough for us! However, if you really feel like you have to get us a gift please click here to donate to our honeymoon fund.</p>
+                
+                
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+
+        <article id="contact" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images/bg4.jpg">
+          <div class="content-wrapper clearfix">
+            
+              <h1 class="section-title">RSVP</h1>
+              
+                <!-- CONTACT DETAILS -->
+                <div class="contact-details col-sm-5 col-md-3">
+                </div>
+                <!-- END: CONTACT DETAILS -->
+
+                <!-- CONTACT FORM -->
+                <div class="col-sm-7 col-md-9">
+                  <!-- IMPORTANT: change the email address at the top of the assets/php/mail.php file to the email address that you want this form to send to -->
+                  <form class="form-style validate-form clearfix" action="assets/php/mail.php" method="POST" role="form">
+
+                    <!-- form left col -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="text-field form-control validate-field required" data-validation-type="string" id="form-name" placeholder="Full Name" name="name">
+                      </div>  
+                      <div class="form-group">
+                        <input type="email" class="text-field form-control validate-field required" data-validation-type="email" id="form-email" placeholder="Email Address" name="email">
+                      </div>
+                      <div class="form-group">
+                        <input type="tel" class="text-field form-control validate-field phone" data-validation-type="phone" id="form-contact-number" placeholder="Contact Number" name="contact_number">
+                      </div>    
+                      <div class="form-group text-right" style='display: none'>
+                        <img id="form-captcha-img" src="assets/php/form_captcha/captcha_img.php">
+                        <input type="text" class="text-field form-control validate-field required" data-validation-type="captcha" id="form-captcha" placeholder="Enter text" name="captcha">
+                        <span id="form-captcha-refresh" class="fa fa-refresh" title="Reload"></span>
+                      </div>                                   
+                    </div><!-- end: form left col -->
+
+                    <!-- form right col -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <textarea placeholder="Message..." class="form-control validate-field required" name="message"></textarea>
+                      </div> 
+                      <div class="form-group">
+                        <img src="assets/images/theme_images/loader-form.GIF" class="form-loader">
+                        <button type="submit" class="btn btn-sm btn-outline-inverse">Submit</button>
+                      </div> 
+                      <div class="form-group form-general-error-container"></div>           
+                    </div><!-- end: form right col -->
+
+                  </form>
+                </div><!-- end: CONTACT FORM -->
+
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+      </section><!-- #main-content -->
+
+      <!-- Footer -->
+      <section id="footer">
+
+        <!-- Go to Top -->
+        <div id="go-to-top" onclick="scroll_to_top();"><span class="icon glyphicon glyphicon-chevron-up"></span></div>
+
+        <ul class="social-icons">
+          <li><a href="#" target="_blank" title="Facebook"><img src="assets/images/theme_images/social_icons/facebook.png" alt="Facebook"></a></li>
+          <li><a href="#" target="_blank" title="Twitter"><img src="assets/images/theme_images/social_icons/twitter.png" alt="Twitter"></a></li>
+          <li><a href="#" target="_blank" title="Google+"><img src="assets/images/theme_images/social_icons/googleplus.png" alt="Google+"></a></li>
+        </ul>
+
+        <!-- copyright text -->
+        <div class="footer-text-line">&copy; 2015 Millsweb</div>
+      </section>
+      <!-- end: Footer -->      
+
+    </div><!-- #outer-container -->
+    <!-- end: Outer Container -->
+
+    <!-- Modal -->
+    <!-- DO NOT MOVE, EDIT OR REMOVE - this is needed in order for popup content to be populated in it -->
+    <div class="modal fade" id="common-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <div class="modal-body clearfix">
+          </div><!-- .modal-body -->
+        </div><!-- .modal-content -->
+      </div><!-- .modal-dialog -->
+    </div><!-- .modal -->    
+
+    <!-- Javascripts
+    ================================================== -->
+
+    <!-- Jquery and Bootstrap JS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Easing - for transitions and effects -->
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+
+    <!-- background image strech script -->
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <!-- background image fix for IE 9 or less
+       - use same background as set above to <body> -->
+    <!--[if lt IE 9]>
     <script type="text/javascript">
-    var disableScroll = false;
-    var currentBackground = "background1.png";
-    $('.navbar').css({'background-color' : "#444444"});
-    $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
-    $(".lnkButton").click(function(ev){
-      var id = ev.currentTarget.id;
-      var scrollPosition = 0;
-      if(id==='about'){
-          scrollPosition = 1000;
-      }
-      if(id==='story'){
-          scrollPosition = 2000;
-      }
-      if(id==='directions'){
-          scrollPosition = 3000;
-      }
-      if(id==='accomidations'){
-          scrollPosition = 4000;
-      }
-      if(id==='gifts'){
-          scrollPosition = 5000;
-      }
-      if(id==='rsvp'){
-          scrollPosition = 6000;
-      }
-      if(id==='title'){
-          scrollPosition = 0;
-      }
-      var backgroundImage = getBackground(scrollPosition);
-      disableScroll = true;
-      $("body, html").animate({ scrollTop: scrollPosition},  "linear", function() {
-        disableScroll = false;
-        if(currentBackground !== backgroundImage)
-        {
-          updateBackground(backgroundImage);
-          currentBackground = backgroundImage;
-        }
-      });
+    $(document).ready(function(){
+      jQuery("#outer-background-container").backstretch("assets/images/other_images/bg5.jpg");
     });
+    </script> 
+    <![endif]-->  
 
-    $(window).scroll(function() {
-      //var scrollPosition = window.document.body.scrollTop; //$("#siteBody").scrollTop();
-      if(disableScroll === false)
-      {
-          var scrollPosition = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
-          console.log("scrollPosition:", scrollPosition);
-          var backgroundImage = getBackground(scrollPosition); 
-          $('#mask').css({height: $(window).height(), width: $(window).width(), top: $(window).scrollTop()});
-          if(backgroundImage.length > 0 && currentBackground !== backgroundImage)
-          {
-              updateBackground(backgroundImage);
-              currentBackground = backgroundImage;
-          }
-      }
-    });
+    <!-- detect mobile browsers -->
+    <script src="assets/js/detectmobilebrowser.js"></script>
 
-    function updateBackground(backgroundImage){ 
-      $('#mask').css({height: $(window).height(), width: $(window).width(), top: $(window).scrollTop()})
-          .fadeIn('slow', function(){
-              $('#siteBody').css('background-image', 'url(../images/'+ backgroundImage +')');
-              $('#mask').fadeOut('slow');
-          });
-    }
+    <!-- owl carousel js -->
+    <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
 
-    function getBackground(scrollPosition){
-      var backgroundImage = '';
-      if(scrollPosition < 1000)
-      {
-         backgroundImage = 'background1.png';
-          $('.navbar').css({'background-color' : "#444444"});
-          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
-      }
-      else if(scrollPosition < 2000)
-      {
-         backgroundImage = 'ranch.png';
-          $('.navbar').css({'background-color' : "#444444"});
-          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
-      }
-      else if(scrollPosition < 3000)
-      {
-         backgroundImage = 'about.png';
-          $('.navbar').css({'background-color' : "#444444"});
-          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
-      }
-      else if(scrollPosition < 4000)
-      {
-         backgroundImage = 'dunes.png';
-          $('.navbar').animate({'background-color' : "#444444"}, 500);
-          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
-      }
-      else if(scrollPosition < 5000)
-      {
-         backgroundImage = 'dunes.png';
-          $('.navbar').css({'background-color' : "#444444"});
-          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
-      }
-      else if(scrollPosition < 6000)
-      {
-         backgroundImage = 'dunes.png';
-          $('.navbar').css({'background-color' : "#444444"});
-          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
-      }
-      else if(scrollPosition < 7000)
-      {
-         backgroundImage = 'dunes.png';
-          $('.navbar').css({'background-color' : "#444444"});
-          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
-      }
-      return backgroundImage;
-    }
-    </script>
+    <!-- lightbox js -->
+    <script src="assets/js/lightbox/js/lightbox.min.js"></script>
+
+    <!-- intro animations -->
+    <script src="assets/js/wow/wow.min.js"></script>
+
+    <!-- responsive videos -->
+    <script src="assets/js/jquery.fitvids.js"></script>
+
+    <!-- Custom functions for this theme -->
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/initialise-functions.js"></script>
+
+    <!-- IE9 form fields placeholder fix -->
+    <!--[if lt IE 9]>
+    <script>contact_form_IE9_placeholder_fix();</script>
+    <![endif]-->  
+
   </body>
 </html>

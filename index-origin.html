@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Brandon and Tara's Wedding</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="./content/carousel.css" rel="stylesheet">
+    <link href="./content/base.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body id='siteBody'>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header" style='text-align: right'>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand lnkButton" id="title"><img src='images/headerlogo.png' style='margin-top: -5px' /></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse" >
+          <ul class="nav navbar-nav" style='text-align: right'>
+            <li><a id="about" class='lnkButton'>About the Wedding</a></li>
+            <li><a id="story" class='lnkButton'>Our Story</a></li>
+            <li><a id="directions" class='lnkButton'>Getting There</a></li>
+            <li><a id="accomidations" class='lnkButton'>Accommodations</a></li>
+            <li><a id="gifts" class='lnkButton'>Gifts</a></li>
+            <li><a id="rsvp" class='lnkButton'>RSVP</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div id="mask" style="position: absolute; top: 0; left: 0; background: #444444; display: none; z-index: 100"​​​​​​​​​​​​​​​​​​​​​​></div>
+    <div id="content" style="position: absolute; top: 0; left: 0;  z-index: 1000; width: 100%"​​​​​​​​​​​​​​​​​​​​​​>
+    
+    <div class='container mainsection' style="z-index: 1000">
+
+    <div class='sectionColumn'><div class='container'  style='margin-top: 60px; z-index: 1000' >
+      <img src = '/images/logo.png' />
+    </div>
+    </div>
+    <div class='sectionColumn'>
+      <div class='container' style='margin-top: 150px; z-index: 1000'> 
+    <div class='summaryBox'>
+      <img src='images/ranch-view.jpg' style='width:100%; margin-bottom: 8px; border-radius: 8px' />
+      <div style='padding: 4px;'>Join us May 9th to celebrate our wedding at <a href='http://palousecreekranch.com/' target='_blank'>Palouse Creek Ranch</a> in beautiful North Bend Oregon. 
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class='container sitesection'><a name="about"></a>
+      <div class='sectionContent'><p class='lead'>About the Wedding</p></div>
+    </div>
+    <div class='container sitesection'><a name="story"></a>
+      <div class='sectionContent'><span class='sectionHeader'>Our Story</span></div>
+    </div>
+    <div class='container sitesection'><a name="directions"></a>
+      <div class='sectionContent'><span class='sectionHeader'>Getting There</span></div>
+    </div>
+    <div class='container sitesection'><a name="accomidations"></a>
+      <div class='sectionContent'><span class='sectionHeader'>Accommodations</span></div>
+    </div>
+    <div class='container sitesection'><a name="gifts"></a>
+      <div class='sectionContent'><span class='sectionHeader'>Gifts</span></div>
+    </div>
+    <div class='container sitesection'><a name="rsvp"></a>
+      <div class='sectionContent'><span class='sectionHeader'>RSVP</span></div>
+    </div>
+</div>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./content/popoutPic.js"></script>
+    <script type="text/javascript">
+    var disableScroll = false;
+    var currentBackground = "background1.png";
+    $('.navbar').css({'background-color' : "#444444"});
+    $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+    $(".lnkButton").click(function(ev){
+      $('#mask').css("display", "none");
+      var id = ev.currentTarget.id;
+      var scrollPosition = 0;
+      if(id==='about'){
+          scrollPosition = 1000;
+      }
+      if(id==='story'){
+          scrollPosition = 2000;
+      }
+      if(id==='directions'){
+          scrollPosition = 3000;
+      }
+      if(id==='accomidations'){
+          scrollPosition = 4000;
+      }
+      if(id==='gifts'){
+          scrollPosition = 5000;
+      }
+      if(id==='rsvp'){
+          scrollPosition = 6000;
+      }
+      if(id==='title'){
+          scrollPosition = 0;
+      }
+      var backgroundImage = getBackground(scrollPosition);
+      disableScroll = true;
+      $("body, html").animate({ scrollTop: scrollPosition},  "linear", function() {
+        disableScroll = false;
+        if(currentBackground !== backgroundImage)
+        {
+          updateBackground(backgroundImage);
+          currentBackground = backgroundImage;
+        }
+      });
+    });
+
+    $(window).scroll(function() {
+      //var scrollPosition = window.document.body.scrollTop; //$("#siteBody").scrollTop();
+      if(disableScroll === false)
+      {
+          var scrollPosition = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
+          var backgroundImage = getBackground(scrollPosition); 
+          $('#mask').css({height: $(window).height(), width: $(window).width(), top: $(window).scrollTop()});
+          if(backgroundImage.length > 0 && currentBackground !== backgroundImage)
+          {
+              updateBackground(backgroundImage);
+              currentBackground = backgroundImage;
+          }
+      }
+    });
+
+    function updateBackground(backgroundImage){ 
+      $('#mask').css({height: $(window).height(), width: $(window).width(), top: $(window).scrollTop()})
+          .fadeIn('slow', function(){
+              $('#siteBody').css('background-image', 'url(../images/'+ backgroundImage +')');
+              setTimeout(function(){ $('#mask').fadeOut('slow'); }, 50);
+          });
+    }
+
+    function getBackground(scrollPosition){
+      var backgroundImage = '';
+      if(scrollPosition < 1000)
+      {
+         backgroundImage = 'background1.png';
+          $('.navbar').css({'background-color' : "#444444"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 2000)
+      {
+         backgroundImage = 'ranch.png';
+          $('.navbar').css({'background-color' : "#444444"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 3000)
+      {
+         backgroundImage = 'about.png';
+          $('.navbar').css({'background-color' : "#444444"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 4000)
+      {
+         backgroundImage = 'dunes.png';
+          $('.navbar').animate({'background-color' : "#444444"}, 500);
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 5000)
+      {
+         backgroundImage = 'bridge.png';
+          $('.navbar').css({'background-color' : "#444444"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 6000)
+      {
+         backgroundImage = 'rsvp.png';
+          $('.navbar').css({'background-color' : "#444444"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      else if(scrollPosition < 7000)
+      {
+         backgroundImage = 'about.png';
+          $('.navbar').css({'background-color' : "#444444"});
+          $('.navbar-inverse .navbar-nav>li>a').css({'color' : "#ffffff"});
+      }
+      return backgroundImage;
+    }
+    </script>
+  </body>
+</html>
