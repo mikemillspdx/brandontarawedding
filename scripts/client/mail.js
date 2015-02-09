@@ -1,6 +1,6 @@
 function sendemail() {
     var names = $("#form-name").val();
-    var email = $("#form-email").val();
+    var emailval = $("#form-email").val();
     var phone = $("#form-contact-number").val();
     var music = $("#form-contact-music").val();
     var drinkSelections = "";
@@ -21,7 +21,7 @@ function sendemail() {
     var email = "taralstreck@gmail.com";
     var subject = "RSVP from Brandon and Tara's Wedding Website";
     var body = "Your Name(s): " + names
-			 + "\n\nEmail:   " + email
+			 + "\n\nEmail:   " + emailval
 			 + "\n\nPhone:   " + phone
 			 + "\n\nMusic Suggestion:" + music
              + "\n\nDrink Selections:\n" + drinkSelections
