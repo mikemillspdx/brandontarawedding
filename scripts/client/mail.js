@@ -5,18 +5,24 @@ function sendemail() {
     var music = $("#form-contact-music").val();
     var drinkSelections = "";
 
-    if($("#form-contact-water").is(':checked'))
+    if($("#form-contact-water").is(':checked')){
         drinkSelections = drinkSelections + "Water\n";
-    if($("#form-contact-soda").is(':checked'))
+    }
+    if($("#form-contact-soda").is(':checked')){
         drinkSelections = drinkSelections + "Soda\n";
-    if($("#form-contact-tea").is(':checked'))
+    }
+    if($("#form-contact-tea").is(':checked')){
         drinkSelections = drinkSelections + "Tea\n";
-    if($("#form-contact-whiskey").is(':checked'))
+    }
+    if($("#form-contact-whiskey").is(':checked')){
         drinkSelections = drinkSelections + "Whiskey\n";
-    if($("#form-contact-wine").is(':checked'))
+    }
+    if($("#form-contact-wine").is(':checked')){
         drinkSelections = drinkSelections + "Wine\n";
-    if($("#form-contact-beer").is(':checked'))
+    }
+    if($("#form-contact-beer").is(':checked')){
         drinkSelections = drinkSelections + "Beer\n";
+    }
 
     var email = "taralstreck@gmail.com";
     var subject = "RSVP from Brandon and Tara's Wedding Website";
