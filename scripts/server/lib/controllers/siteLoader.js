@@ -1,12 +1,55 @@
 var url = require('url');
 var path = require('path');
 var fs = require('fs');
+var AWS = require('aws-sdk');
+
+exports.sendEmail = function (request, response, next)
+{
+	console.log("Parameters", request.params);
+			var email = {
+				Source: "mikemillspdx@gmail.com",
+				Destination: {
+					ToAddresses: request.params.email
+				},
+				Message: {
+					Subject: {
+						Data: request.params.subject
+					},
+					Body: {
+						Data: request.params.body
+					}
+				}
+			};
+		
+			var ses = new AWS.SES();
+			AWS.config.update({
+						"accessKeyId": "",  
+						"secretAccessKey": "",
+						"region": "us-west-2"
+					});
+
+			/*ses.sendEmail(email, 
+			function (err, data) {
+				if(err){
+					console.log("An Error Occured");
+				}
+				else
+				{
+					console.log("Success");
+				}
+			});
+			*/
+			response.writeHead(200, {"Content-Type": "text/plain"});
+			response.write("email sent" + "\n");
+			response.end();
+			return;
+}
 
 exports.loadsite = function (request, response, next)
 {
-console.log('loadingsite');
+	console.log('Called Load Site');
 
-  var uri = url.parse(request.url).pathname
+  	var uri = url.parse(request.url).pathname
     , filename = path.join(process.cwd(), uri);
 
     console.log(request);
@@ -60,4 +103,5 @@ console.log('loadingsite');
 		response.end();
 	});
   }); 
+
 } 
