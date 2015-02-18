@@ -1,48 +1,39 @@
 var url = require('url');
 var path = require('path');
 var fs = require('fs');
-var AWS = require('aws-sdk');
+var nodemailer = require('nodemailer');
+
+
+var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'mikemillspdx@gmail.com',
+        pass: ''
+    }
+});
 
 exports.sendEmail = function (request, response, next)
 {
-	console.log("Parameters", request.params);
-			var email = {
-				Source: "mikemillspdx@gmail.com",
-				Destination: {
-					ToAddresses: request.params.email
-				},
-				Message: {
-					Subject: {
-						Data: request.params.subject
-					},
-					Body: {
-						Data: request.params.body
-					}
-				}
-			};
-		
-			var ses = new AWS.SES();
-			AWS.config.update({
-						"accessKeyId": "",  
-						"secretAccessKey": "",
-						"region": "us-west-2"
-					});
-
-			/*ses.sendEmail(email, 
-			function (err, data) {
-				if(err){
-					console.log("An Error Occured");
-				}
-				else
-				{
-					console.log("Success");
-				}
-			});
-			*/
-			response.writeHead(200, {"Content-Type": "text/plain"});
-			response.write("email sent" + "\n");
-			response.end();
-			return;
+	var mailOptions = {
+	    from: 'mikemillspdx@gmail.com', // sender address
+	    to: 'taralstreck@gmail.com', // list of receivers
+	    subject: 'RSVP from Brandon and Taras Wedding Website', // Subject line
+	    text: decodeURI(request.params.body) , // plaintext body
+	    html: decodeURI(request.params.body)  // html body
+	};
+	console.log(mailOptions);
+	transporter.sendMail(mailOptions, function(error, info){
+	    if(error){
+	    	console.log(error);
+      		response.writeHead(200, {"Content-Type": "text/plain"});
+	      	response.write(error);
+	      	response.end();
+	    }else{
+      	  response.writeHead(200, {"Content-Type": "text/plain"});
+	      response.write("Your RSVP has was successfully sent." );
+	      response.end();
+	    }
+	});
 }
 
 exports.loadsite = function (request, response, next)

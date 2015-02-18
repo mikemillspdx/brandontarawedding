@@ -7,37 +7,33 @@ function sendemail() {
     var drinkSelections = "";
 
     if($("#form-contact-water").is(':checked')){
-        drinkSelections = drinkSelections + "Water\n";
+        drinkSelections = drinkSelections + "Water<br/>";
     }
     if($("#form-contact-soda").is(':checked')){
-        drinkSelections = drinkSelections + "Soda\n";
+        drinkSelections = drinkSelections + "Soda<br/>";
     }
     if($("#form-contact-tea").is(':checked')){
-        drinkSelections = drinkSelections + "Tea\n";
+        drinkSelections = drinkSelections + "Tea<br/>";
     }
     if($("#form-contact-whiskey").is(':checked')){
-        drinkSelections = drinkSelections + "Whiskey\n";
+        drinkSelections = drinkSelections + "Whiskey<br/>";
     }
     if($("#form-contact-wine").is(':checked')){
-        drinkSelections = drinkSelections + "Wine\n";
+        drinkSelections = drinkSelections + "Wine<br/>";
     }
     if($("#form-contact-beer").is(':checked')){
-        drinkSelections = drinkSelections + "Beer\n";
+        drinkSelections = drinkSelections + "Beer<br/>";
     }
-
-    var email = "taralstreck@gmail.com";
-    var subject = "RSVP from Brandon and Tara's Wedding Website";
     var body = "Your Name(s): " + names
-             + "\n\nWill you be attending?:   " + attending
-			 + "\n\nEmail:   " + emailval
-			 + "\n\nPhone:   " + phone
-			 + "\n\nMusic Suggestion:" + music
-             + "\n\nDrink Selections:\n" + drinkSelections
-
-    //window.open('mailto:' + email + '?subject=' + encodeURIComponent(subject));
-
-    var link = 'mailto:' + email + "&subject=" + escape(subject)
-    + "&body=" + escape(body); 
-    
-    window.location.href = link; 
+             + "<br/><br/>Will you be attending?:   " + attending
+			 + "<br/><br/>Email:   " + emailval
+			 + "<br/><br/>Phone:   " + phone
+			 + "<br/><br/>Music Suggestion:" + music
+             + "<br/><br/>Drink Selections:<br/>" + drinkSelections;
+    $.ajax({
+      url:"/sendEmail?body=" + encodeURI(body), 
+      success:function(data) {
+        alert(data);
+      }
+   });
 }
