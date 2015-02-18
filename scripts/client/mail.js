@@ -3,6 +3,7 @@ function sendemail() {
     var emailval = $("#form-email").val();
     var phone = $("#form-contact-number").val();
     var music = $("#form-contact-music").val();
+    var attending = $( "#form-attending" ).val();
     var drinkSelections = "";
 
     if($("#form-contact-water").is(':checked')){
@@ -27,6 +28,7 @@ function sendemail() {
     var email = "taralstreck@gmail.com";
     var subject = "RSVP from Brandon and Tara's Wedding Website";
     var body = "Your Name(s): " + names
+             + "\n\nWill you be attending?:   " + attending
 			 + "\n\nEmail:   " + emailval
 			 + "\n\nPhone:   " + phone
 			 + "\n\nMusic Suggestion:" + music

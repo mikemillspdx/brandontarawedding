@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.25, maximum-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -204,6 +203,11 @@ We hope you can join us on our special day!</p>
                 <h1 class="section-title">What to do</h1>
 
                 <p class="feature-paragraph">For those of you who can stay with us for Sunday, May 10th after the wedding, we’re planning an awesome day on the coast and we’d love you all to join us! There’ll be a low tide at 12:30 PM on Sunday so we’re planning on making a day camp on the beach and crabbing and clam digging during the tide. We’ll be cooking, cleaning and eating fresh delicious crab on the beach! We’re excited to show any and all a true Coastal experience!</p>
+                <p class="feature-paragraph">
+                For more information about some of the fun things you can do around the North Bend area, check out the links below.<br/><br/>
+                <a href ='http://www.oregonsadventurecoast.com/' target="_blank">http://www.oregonsadventurecoast.com</a><br/>
+                <a href ='http://coosbay.org/visiting/' target="_blank">http://coosbay.org/visiting</a><br/>
+                </p>
                 
                 
             </div><!-- .col-sm-10 -->
@@ -218,8 +222,20 @@ We hope you can join us on our special day!</p>
 
                 <h1 class="section-title">Gifts</h1>
 
-                <p class="feature-paragraph">Since this is a destination wedding, just being there is gift enough for us! However, if you really feel like you have to get us a gift please click here to donate to our honeymoon fund.</p>
+                <p class="feature-paragraph">Since this is a destination wedding, just being there is gift enough for us! However, if you really feel like you have to get us a gift please <a href="" onclick="populate_and_open_modal(event, 'modal-content-1');" >click here</a> to learn how to our honeymoon fund.</p>
                 
+                <div class="content-to-populate-in-modal" id="modal-content-1">
+                        <h1>Domations through Google Wallet</h1>
+                        <p>There are 2 ways to send funds via Google Wallet. </p>
+                        <p>- The first way is via gmail.  This is for those people who currently have a gmail account or would like to create a new gmail account. To access your gmail, simply go to mail.google.com
+                        <br/>- The 2nd way is via the google wallet app.  You can download the app to your mobile device from iTunes or Googleplay. (By the way, if you own an android mobile device, you probably already have a google account)</p>
+                        <p>If you have a gmail account, the easiest way is to simply compose an email and click the dollar sign ($) icon at the bottom of the email compose window.  See the picture below:<br/><br/>
+                          <img src="images/walletemail.jpg"/></p>
+                          <p>After you click the icon, a new dialogue window will open.  Simply follow the instructions to send the amount of your choosing.
+                          </p><p>Be sure to send your email donation to taralstreck@gmail.com!
+                          </p><p>For honeymoon updates, we’ll be updating Tara’s Facebook page.  Be sure to follow along!
+                          </p>
+                      </div><!-- #modal-content-3 -->
                 
             </div><!-- .col-sm-10 -->
           </div><!-- .content-wrapper -->
@@ -241,6 +257,9 @@ We hope you can join us on our special day!</p>
                    <div class="form-style validate-form clearfix">
                     <!-- form left col -->
                     <div class="col-md-6">
+                      <div class="form-group">
+                        <select class="text-field form-control" id="form-attending" style='height: 50px; background-color: rgba(0,0,0,0.2); color: white; font-size: inherit; font-family: inherit; font-weight: bold'><option style='color: black'>I will be attending</option><option style='color: black'>Sorry I can't make it</option></select>
+                      </div> 
                       <div class="form-group">
                         <input type="text" class="text-field form-control validate-field required" data-validation-type="string" id="form-name" placeholder="Your Name(s)" name="name">
                       </div>  
