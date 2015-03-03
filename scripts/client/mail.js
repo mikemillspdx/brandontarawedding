@@ -4,7 +4,7 @@ function sendemail() {
     var phone = $("#form-contact-number").val();
     var music = $("#form-contact-music").val();
     var attending = $( "#form-attending" ).val();
-    var partyNumber = ($"#form-party-count").val();
+    var partyNumber = $("#form-party-count").val();
     var drinkSelections = "";
 
     if($("#form-contact-water").is(':checked')){
@@ -27,12 +27,13 @@ function sendemail() {
     }
 
     var body = "Your Name(s): " + names
-             + "<br/><br/>Will you be attending?:   " + attending
-             + "<br/><br/># of People:   " + partyNumber
-			 + "<br/><br/>Email:   " + emailval
-			 + "<br/><br/>Phone:   " + phone
-			 + "<br/><br/>Music Suggestion:" + music
+             + "<br/><br/>Will you be attending?: " + attending
+             + "<br/><br/># of People: " + partyNumber.toString()
+			 + "<br/><br/>Email: " + emailval
+			 + "<br/><br/>Phone: " + phone
+			 + "<br/><br/>Music Suggestion: " + music
              + "<br/><br/>Drink Selections:<br/>" + drinkSelections;
+    console.log(body);
     $.ajax({
       url:"/sendEmail?body=" + encodeURI(body), 
       success:function(data) {
