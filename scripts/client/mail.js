@@ -4,6 +4,7 @@ function sendemail() {
     var phone = $("#form-contact-number").val();
     var music = $("#form-contact-music").val();
     var attending = $( "#form-attending" ).val();
+    var partyNumber = ($"#form-party-count").val();
     var drinkSelections = "";
 
     if($("#form-contact-water").is(':checked')){
@@ -24,8 +25,10 @@ function sendemail() {
     if($("#form-contact-beer").is(':checked')){
         drinkSelections = drinkSelections + "Beer<br/>";
     }
+
     var body = "Your Name(s): " + names
              + "<br/><br/>Will you be attending?:   " + attending
+             + "<br/><br/># of People:   " + partyNumber
 			 + "<br/><br/>Email:   " + emailval
 			 + "<br/><br/>Phone:   " + phone
 			 + "<br/><br/>Music Suggestion:" + music
