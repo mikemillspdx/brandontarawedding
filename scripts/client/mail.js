@@ -26,13 +26,13 @@ function sendemail() {
         drinkSelections = drinkSelections + "Beer<br/>";
     }
 
-    var body = "Your Name(s): " + names
+    var body = "Your Name(s): " + names.replace("#", "").replace("&", "and")
              + "<br/><br/>Will you be attending?: " + attending
-             + "<br/><br/># of People: " + partyNumber.toString()
-			 + "<br/><br/>Email: " + emailval
-			 + "<br/><br/>Phone: " + phone
-			 + "<br/><br/>Music Suggestion: " + music
-             + "<br/><br/>Drink Selections:<br/>" + drinkSelections;
+             + "<br/><br/>Number of People: " + partyNumber.replace("#", "").replace("&", "and")
+			 + "<br/><br/>Email: " + emailval.replace("#", "").replace("&", "and")
+			 + "<br/><br/>Phone: " + phone.replace("#", "").replace("&", "and")
+			 + "<br/><br/>Music Suggestion: " + music.replace("#", "").replace("&", "and")
+             + "<br/><br/>Drink Selections:<br/>" + drinkSelections.replace("#", "").replace("&", "and");
     console.log(body);
     $.ajax({
       url:"/sendEmail?body=" + encodeURI(body), 
